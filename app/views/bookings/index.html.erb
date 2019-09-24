@@ -1,0 +1,14 @@
+<h1>Book-My-House</h1>
+
+<%= form_for :booking, method: :get do |f| %>
+  <%= f.date_select :day, selected: @date || Date.today %>
+  <%= f.submit 'Check' %>
+<% end %>
+
+<div id='booked-result'>
+  <% if @booked %>
+    The house is booked for the selected day :(
+  <% else %>
+    Yay! You can book the house on the selected day!
+  <% end %>
+</div>
