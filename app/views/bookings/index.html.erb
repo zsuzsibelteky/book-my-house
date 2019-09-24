@@ -1,6 +1,6 @@
 <h1>Book-My-House</h1>
 <p><%= link_to 'Book the house!', new_booking_path %></p>
-<p>...or check whether the house is booked already</p>
+<p>...or check whether the house is booked already:</p>
 
 <%= form_for :booking, url: query_path, remote: true do |f| %>
   <%= f.date_select :day %>
