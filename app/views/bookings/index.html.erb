@@ -1,14 +1,14 @@
 <h1>Book-My-House</h1>
+<p><%= link_to 'Book the house!', new_booking_path %></p>
+<p>...or check whether the house is booked already</p>
 
-<%= form_for :booking, method: :get do |f| %>
-  <%= f.date_select :day, selected: @date || Date.today %>
+<%= form_for :booking, url: query_path, remote: true do |f| %>
+  <%= f.date_select :day %>
   <%= f.submit 'Check' %>
 <% end %>
 
-<div id='booked-result'>
-  <% if @booked %>
-    The house is booked for the selected day :(
-  <% else %>
-    Yay! You can book the house on the selected day!
-  <% end %>
+<div id='booked-result'></div>
+
+<div class='bookings'>
+  <%= render @bookings %>
 </div>

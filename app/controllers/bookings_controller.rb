@@ -1,25 +1,25 @@
 class BookingsController < ApplicationController
   def index
-    @date = query_date
-    @booked = Booking.booked_for?(@date) if @date.present?
+    @bookings = Booking.all.ordered
   end
 
   def new
+    @booking = Booking.new
   end
 
   def create
-  end
+    @booking = Booking.new(booking_params)
 
-  def destroy
+    if @booking.save
+      redirect_to bookings_path
+    else
+      render :new
+    end
   end
 
   private
 
   def booking_params
     params.require(:booking).permit(:day)
-  end
-
-  def query_date
-    Date.new(*params.require(:booking).permit(:day).to_h.map { |_, value| value.to_i }) rescue nil
   end
 end

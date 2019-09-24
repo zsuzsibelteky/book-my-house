@@ -1,0 +1,12 @@
+<h1>Book the house!</h1>
+
+<%= form_for @booking do |f| %>
+  <% if @booking.errors.any? %>
+    <% @booking.errors.full_messages.each do |msg| %>
+      <p class='error'><%= msg %></p>
+    <% end %>
+  <% end %>
+  <%= f.label :day, 'Day of booking:' %>
+  <%= f.date_select :day %>
+  <%= f.submit %>
+<% end %>
