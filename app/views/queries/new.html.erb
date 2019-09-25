@@ -7,4 +7,10 @@
 
 <p><%= link_to 'Back', bookings_path %></p>
 
-<p id='booked-result'><%= booking_info @booked %></p>
+<p id='booked-result'>
+  <% if @booked %>
+    The house is booked for the selected day :(
+  <% elsif !@booked.nil? %>
+    Yay! You can book the house on the selected day!
+  <% end %>
+</p>
