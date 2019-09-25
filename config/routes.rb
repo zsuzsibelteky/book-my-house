@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   root to: 'bookings#index'
 
   resources :bookings, only: %i[index new create]
-  resource :query, only: :create
+  resource :query, only: %i[new create]
 end

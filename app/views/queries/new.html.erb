@@ -1,0 +1,10 @@
+<h1>Is it booked?</h1>
+
+<%= form_for :booking, url: query_path do |f| %>
+  <%= f.date_select :day, selected: @day || Date.today %>
+  <%= f.submit 'Check' %>
+<% end %>
+
+<p><%= link_to 'Back', bookings_path %></p>
+
+<p id='booked-result'><%= booking_info @booked %></p>

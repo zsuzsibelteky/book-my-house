@@ -31,4 +31,19 @@ class BookingTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select '.error', 'Day has already been taken'
   end
+
+  test 'can query a day for booking info' do
+    date = Date.today
+    booking_params = { booking: { 'day(1i)' => date.year, 'day(2i)' => date.month, 'day(3i)' => date.day } }
+
+    post '/query', params: booking_params
+    assert_response :success
+    assert_select '#booked-result', 'Yay! You can book the house on the selected day!'
+
+    Booking.create(day: date)
+    post '/query', params: booking_params
+
+    assert_response :success
+    assert_select '#booked-result', 'The house is booked for the selected day :('
+  end
 end

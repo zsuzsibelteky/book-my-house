@@ -1,6 +1,12 @@
 class QueriesController < ApplicationController
+  def new
+  end
+
   def create
-    @booked = Booking.booked_for?(query_date)
+    @day = query_date
+    @booked = Booking.booked_for?(@day)
+
+    render :new
   end
 
   private
