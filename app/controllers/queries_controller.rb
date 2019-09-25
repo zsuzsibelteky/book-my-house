@@ -12,6 +12,12 @@ class QueriesController < ApplicationController
   private
 
   def query_date
-    Date.new(*params.require(:booking).permit(:day).to_h.map { |_, value| value.to_i })
+    booking_params = params.require(:booking).permit('day(1i)', 'day(2i)', 'day(3i)')
+
+    year = booking_params['day(1i)'].to_i
+    month = booking_params['day(2i)'].to_i
+    day = booking_params['day(3i)'].to_i
+
+    Date.new(year, month, day)
   end
 end
