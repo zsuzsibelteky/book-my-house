@@ -1,24 +1,5 @@
-# README
+## Hello!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the project our candidates are given tasks on during the interview process.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+First of all, figure out the dependencies of this project, install it on your local machine and run the server!
