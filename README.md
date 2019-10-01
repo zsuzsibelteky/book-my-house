@@ -15,8 +15,10 @@ Important notice: We would like to see how you think. Feel free to ask us in any
 * https://www.railstutorial.org/book a good but $9 priced Rails tutorial, worth it
 
 ## First of all, let's run the server locally!
-1. Clone this repo
-2. Install ruby 2.5.1
+1. Install the prerequisites:
+    - Node.js with Yarn (https://riptutorial.com/node-js/example/29249/yarn-installation)
+    - Ruby 2.5.1 (https://solarianprogrammer.com/2018/09/22/install-ruby-macos-windows-ubuntu/)
+2. Clone this repo
 3. Go to the projects main directory and run `bundle install` to install the dependencies listed in the Gemfile
 4. Run `rails db:setup` to create the local database
 5. Run `rails server`, then you can access the app on `localhost:3000`
