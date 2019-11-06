@@ -25,7 +25,7 @@ class BookingTest < ActionDispatch::IntegrationTest
 
   test 'cannot create an invalid booking' do
     date = Date.today
-    Booking.create(day: date)
+    Booking.create!(day: date)
     post '/bookings', params: { booking: { 'day(1i)' => date.year, 'day(2i)' => date.month, 'day(3i)' => date.day } }
 
     assert_response :success
@@ -40,7 +40,7 @@ class BookingTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select '#booked-result', 'Yay! You can book the house on the selected day!'
 
-    Booking.create(day: date)
+    Booking.create!(day: date)
     post '/query', params: booking_params
 
     assert_response :success
