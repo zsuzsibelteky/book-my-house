@@ -30,7 +30,7 @@ Important notice: We would like to see how you think. Feel free to ask us in any
     1. [must] Create a new migration
     2. [must] Create a validation to allow only between 1-8
     3. [must] Add this field to the new booking form
-    4. [optional] Display an error message at the page if the input is not valid 
+    4. [optional] Customize the error message on the page if the input is invalid
     5. [optional] Write automated tests
 2. Add an email field to the Bookings.
     1. [must] Create a new migration
