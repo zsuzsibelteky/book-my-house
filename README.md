@@ -1,57 +1,44 @@
-# Hello candidate!
+# Dear candidate!
 
-We are happy to meet you in this interview process! This is our code skill test application. It is a simple Ruby on Rails app very similar to our products.
+At this stage of the interview process, you'll be introduced to a very simple Ruby on Rails application, on which you'll have to do a number of exercises. Our goal with this is to examine the various skillsets you have. Let me just point that out, that you do NOT need to finish all the exercises in order to succeed. We'd rather like to learn the way you think, solve problems and your general knowledge on the topic by watching you work, than to just discuss the sheer number of LoC you wrote.
 
-What does this app do? It is a guesthouse management app for a given house. You can book a house for a given day, list the bookings and even query whether a day is already booked.
+The application you'll be working with today is practically a "guesthouse management app". You can book for a specific date, which will then be displayed on the main page. You're encouraged to try out it's functionality before starting any of the exercises.
 
-Objective: Finish one or more tasks to convince us about your problem solving skills. We also added subtasks to see the steps needed. It is enough if you finish one of the 6 tasks, but if you have fun you might continue until there is no task left. 
+If you come across an obstacle which proves to be difficult, feel encouraged to ask us anything! We'll be glad to answer or ask some leading questions. (Or just utilize Google, StackOverflow or https://guides.rubyonrails.org/ to your liking.)
 
-Important notice: We would like to see how you think. Feel free to ask us in any channel! One more note - don't spend more than two weeks on this.
+I wish you success!
 
-## Useful websites:
-* https://guides.rubyonrails.org for Rails related general knowledge
-* https://apidock.com/rails for searching documentation
-* http://ruby-toolbox.com if you are interested about library support
-* https://www.railstutorial.org/book a good but $9 priced Rails tutorial, worth it
+##Let's begin!
+0. Run the server
+    1. open up https://paiza.cloud/en/ in your browser
+    2. sign in with your google account or create on with an email
+    3. create a new server: { name: "book-my-house", Web application development: "Ruby on Rails", Database: "PostgreSQL" }
+    4. open the menu in the to left corner of the screen and select 'git'>>'clone' and then this project repo
+    5. open a terminal window
+        - run these commands from /home/ubuntu (you might already be there, so it's worth cheking with 'echo $PWD')
+        - 'gem install bundler'
+        - 'bundle install'
+        - 'rails db:setup'
+        - 'rails server'
+    6. open the app via the 'localhost' popup
 
-## First of all, let's run the server locally!
-1. Install the prerequisites:
-    - Node.js with Yarn (https://riptutorial.com/node-js/example/29249/yarn-installation)
-    - Ruby 2.5.1 (https://solarianprogrammer.com/2018/09/22/install-ruby-macos-windows-ubuntu/)
-2. Clone this repo
-3. Install bundler: run `gem install bundler`
-4. Go to the projects main directory and run `bundle install` to install the dependencies listed in the Gemfile
-5. Run `rails db:setup` to create the local database
-6. Run `rails server`, then you can access the app on `localhost:3000`
-7. Run `rails test` to see the test code results
+1. Add a new number_of_guests field to Bookings
+    1. create a new migration
+    2. create a validation to allow only between 1-8
+    3. add an input field to the booking form
+    4. customize the error message on the page if the input is invalid
 
-## Tasks:
-1. Add a new number_of_people field to the Bookings
-    1. [must] Create a new migration
-    2. [must] Create a validation to allow only between 1-8
-    3. [must] Add this field to the new booking form
-    4. [optional] Customize the error message on the page if the input is invalid
-    5. [optional] Write automated tests
-2. Add an email field to the Bookings.
-    1. [must] Create a new migration
-    2. [must] Send a confirmation email to the given address when the Booking is saved
-    3. [optional] Create a validation to allow only email addresses
-    4. [optional] Use a ruby gem to automatically open the sent email during development (https://www.ruby-toolbox.com/categories/EMail_Fake_Servers)
-    5. [optional] Write automated tests
-3. Style the UI of the app!
-    1. [must] Use any front-end tools to make this application a bit nicer
-4. Create a statistics page
-    1. [must] Create a new route and a new controller for the statistics
-    2. [must] Display the summary of the booked days
-    3. [optional] Display the monthly summary
-    4. [optional] Write automated tests
-5. Add pagination into the /bookings page using the pagy ruby gem
-    1. [must] Add pagination to the bookings list. Every page should display 10 bookings
-    2. [optional] Use one of the ruby gems to achieve it (https://www.ruby-toolbox.com/categories/pagination)
-    3. [optional] Write automated tests
-6. Deploy this application to Heroku
-    1. [must] Deploy this simple application to Heroku and use their Postgresql database in production (https://devcenter.heroku.com/articles/getting-started-with-rails6)
-    2. [optional] Add addons for log handling, error monitoring, etc
+2. Style the UI of the app!
+    1. install the bootstrap gem
+    2. change the application.css file's extension to .scss
+    3. import bootstrap there
+
+3. Create an occupation page
+    1. create a new route and a new controller for the occupations
+    2. display the booked days like so: 4_2019.08.03 where '4' is the number of guests (if you've done the first exercise) and the rest is just the booking date separated by dots
+    3. primarily order the list by the number of guests, and secondarily shuffle the dates
+
+4. Add pagination to /bookings
+    1. use a gem to do this! We suggest 'pagy'. (browse here: https://www.ruby-toolbox.com/categories/pagination)
+    2. make it so, that every page only displays four bookings
     
-    
-See you in two weeks!
