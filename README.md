@@ -8,7 +8,7 @@ If you come across an obstacle which proves to be difficult, feel encouraged to 
 
 I wish you success!
 
-##Let's begin!
+## Let's begin!
 0. Run the server
     1. open up https://paiza.cloud/en/ in your browser
     2. sign in with your google account or create on with an email
