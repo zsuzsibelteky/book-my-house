@@ -59,4 +59,7 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+  
+  # Paizacloud needs this to run localhost on their server
+  config.hosts << "localhost-book-my-house.paiza-user-free.cloud"
 end
