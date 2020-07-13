@@ -15,7 +15,7 @@ I wish you success!
     3. create a new server: { name: "book-my-house", Web application development: "Ruby on Rails", Database: "PostgreSQL" }
     4. open the menu in the to left corner of the screen and select 'git'>>'clone' and then this project repo
     5. open a terminal window
-        - run these commands from /home/ubuntu (you might already be there, so it's worth cheking with 'echo $PWD')
+        - run these commands from /home/ubuntu/book-my-house (you might already be there, so it's worth cheking with 'echo $PWD')
         - 'gem install bundler'
         - 'bundle install'
         - 'rails db:setup'
@@ -29,7 +29,7 @@ I wish you success!
     4. customize the error message on the page if the input is invalid
 
 2. Style the UI of the app!
-    1. install the bootstrap gem
+    1. install the [bootstrap gem](https://github.com/twbs/bootstrap-rubygem)
     2. change the application.css file's extension to .scss
     3. import bootstrap there
 
@@ -39,6 +39,6 @@ I wish you success!
     3. primarily order the list by the number of guests, and secondarily shuffle the dates
 
 4. Add pagination to /bookings
-    1. use a gem to do this! We suggest 'pagy'. (browse here: https://www.ruby-toolbox.com/categories/pagination)
+    1. use a gem to do this! We suggest 'pagy'. browse [here](https://www.ruby-toolbox.com/categories/pagination)
     2. make it so, that every page only displays four bookings
     
