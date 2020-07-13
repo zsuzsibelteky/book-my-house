@@ -16,8 +16,9 @@ I wish you success!
     4. open the menu in the to left corner of the screen and select 'git'>>'clone' and then this project repo
     5. open a terminal window
         - run these commands from /home/ubuntu/book-my-house (you might already be there, so it's worth cheking with 'echo $PWD')
-        - 'gem install bundler'
+        - 'sudo gem install bundler'
         - 'bundle install'
+        - 'yarn install --check-files'
         - 'rails db:setup'
         - 'rails server'
     6. open the app via the 'localhost' popup
