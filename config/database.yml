@@ -5,14 +5,9 @@ default: &default
 development:
   <<: *default
   adapter: sqlite3
-  database: book_my_house_development
+  database: tmp/book_my_house_development.sqlite
 
 test:
   <<: *default
   adapter: sqlite3
-  database: book_my_house_test
-
-production:
-  <<: *default
-  adapter: postgresql
-  url: <%= ENV['DATABASE_URL'] %>
+  database: tmp/book_my_house_test.sqlite
