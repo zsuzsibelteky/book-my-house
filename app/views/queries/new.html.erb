@@ -1,8 +1,12 @@
 <h1>Is it booked?</h1>
 
-<%= form_for :booking, url: query_path do |f| %>
-  <%= f.date_select :day, selected: @day || Date.today %>
-  <%= f.submit 'Check' %>
+<% if @react_enabled %>
+  <%= react_component('BookingForm') %>
+<% else %>
+  <%= form_for :booking, url: query_path do |f| %>
+    <%= f.date_select :day, selected: @day || Date.today %>
+    <%= f.submit 'Check' %>
+  <% end %>
 <% end %>
 
 <p><%= link_to 'Back', bookings_path %></p>

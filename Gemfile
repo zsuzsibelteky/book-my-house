@@ -13,6 +13,7 @@ gem 'sqlite3'
 gem 'sass-rails'
 gem 'turbolinks'
 gem 'webpacker'
+gem 'react-rails'
 
 # Misc
 gem 'bootsnap', require: false

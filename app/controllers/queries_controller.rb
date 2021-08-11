@@ -1,5 +1,6 @@
 class QueriesController < ApplicationController
   def new
+    @react_enabled = params.key?('react')
   end
 
   def create
