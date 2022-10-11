@@ -13,7 +13,7 @@
 <h2>The full list of bookings:</h2>
 <div class='bookings'>
   <% if @bookings.any? %>
-    <%= render @bookings %>
+    <%= render partial: 'bookings/booking', collection: @bookings %>
   <% else %>
     There is no booking yet.
   <% end %>
