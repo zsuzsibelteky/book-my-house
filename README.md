@@ -72,11 +72,11 @@ After installing the [Prerequisites](#prerequisites), you need to
     ```
 4. Optionally you can run webpacker dev server to speed up asset handling
     ```bash
-    bin/webpack-dev-server
+    bin/webpacker-dev-server
     ```
    or
    ```cmd
-   ruby bin/webpack-dev-server
+   ruby bin/webpacker-dev-server
    ```
    on Windows
 

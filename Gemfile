@@ -12,7 +12,7 @@ gem 'sqlite3'
 # Assets
 gem 'sass-rails'
 gem 'turbolinks'
-gem 'webpacker'
+gem 'shakapacker'
 gem 'react-rails'
 
 # Misc
