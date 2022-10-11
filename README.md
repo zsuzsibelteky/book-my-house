@@ -90,7 +90,7 @@ You can run the test suit with `rails test`
 
 ### Coding style checks
 
-We haven't introduced linters yet, but we're planning to adapt Rubocop.
+We're using rubocop to enforce some consistency. You can run it with `rubocop -ED`.
 
 ## Deployment
 

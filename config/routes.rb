@@ -3,10 +3,10 @@ Rails.application.routes.draw do
   root to: 'bookings#index'
 
   namespace :api do
-    resource :query, only: %i[create]
+    resource :query, only: [:create]
   end
 
-  resources :bookings, only: %i[index new create]
-  resource :query, only: %i[new create]
-  resource :statistic, only: %i[show]
+  resources :bookings, only: [:index, :new, :create]
+  resource :query, only: [:new, :create]
+  resource :statistic, only: [:show]
 end

@@ -1,0 +1,15 @@
+require:
+  - rubocop-minitest
+  - rubocop-performance
+  - rubocop-rails
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 2.7
+
+Style/Documentation:
+  Enabled: false
+
+Style/SymbolArray:
+  EnforcedStyle: brackets
