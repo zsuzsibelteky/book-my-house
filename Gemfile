@@ -20,6 +20,8 @@ gem 'bootsnap', require: false
 gem 'tzinfo'
 gem 'tzinfo-data'
 
+gem 'groupdate'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rubocop'
