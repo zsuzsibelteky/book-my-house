@@ -32,3 +32,6 @@ yarn-debug.log*
 
 /book_my_house_development
 /book_my_house_test*
+
+# Ignore .idea
+/.idea
