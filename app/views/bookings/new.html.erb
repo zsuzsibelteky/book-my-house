@@ -13,6 +13,10 @@
   <p>
     <%= f.label :house, 'Select a place:' %>
     <%= f.select :house_id, options_from_collection_for_select(House.ordered, :id, :name), include_blank: true %>
+  </p>
+  <p>
+    <%= f.label :numberOfGuests, 'Add the number of guests:' %>
+    <%= f.number_field :number_of_guests %>
     <%= f.submit %>
   </p>
 <% end %>
