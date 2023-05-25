@@ -1,0 +1,14 @@
+<h1><%= @house.name %></h1>
+
+<h2>The list of bookings: </h2>
+<div class='bookings'>
+  <% if @bookings.any? %>
+    <%= render partial: 'bookings/booking', collection: @bookings %>
+  <% else %>
+    There is no booking yet.
+  <% end %>
+</div>
+
+<p><%= link_to 'Revers booking order', house_path(@house, revers: @order) %></p>
+
+<p><%= link_to 'Back', bookings_path %></p>
