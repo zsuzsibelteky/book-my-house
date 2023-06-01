@@ -13,6 +13,8 @@
 <h2>The full list of bookings:</h2>
 <div class='bookings'>
   <% if @bookings.any? %>
+    <%== pagy_nav(@pagy) if @pagy.pages > 1 %>
+    <%== pagy_items_selector_js(@pagy) %>
     <%= render partial: 'bookings/booking', collection: @bookings %>
   <% else %>
     There is no booking yet.
