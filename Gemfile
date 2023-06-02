@@ -19,6 +19,7 @@ gem 'react-rails'
 gem 'bootsnap', require: false
 gem 'tzinfo'
 gem 'tzinfo-data'
+gem "pagy"
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

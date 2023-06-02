@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
   def index
-    @bookings = Booking.all.ordered
+    @pagy, @bookings = pagy(Booking.all.ordered, items_extra: true)
+    #@bookings = Booking.all.ordered
   end
 
   def new
